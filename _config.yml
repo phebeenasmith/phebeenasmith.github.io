@@ -26,7 +26,7 @@ author:
   avatar           : "profile.png"
   name             : "Phebeena Smith"
   pronouns         : # example: "she/her"  
-  bio              : "Ph.D. Candidate in Economics at McMaster University"
+  bio              : #"Ph.D. Candidate in Economics at McMaster University"
   location         : "Toronto, ON, Canada"
   employer         : "Mcmaster University"
   uri              : # URL
@@ -38,7 +38,7 @@ author:
   googlescholar    : #"https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
   inspire-hep      : # URL
   impactstory      : # URL
-  orcid            : "https://orcid.org/yourorcidurl"
+  orcid            : #"https://orcid.org/yourorcidurl"
   semantic         : # URL
   ssrn             : # URL
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
