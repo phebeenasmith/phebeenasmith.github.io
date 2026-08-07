@@ -23,7 +23,7 @@ repository               : "phebeenasmith/phebeenasmith.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "https://i.imgur.com/a/8qwF7uJ.jpg"
+  avatar           : "profile.jpg"
   name             : "Phebeena Smith"
   pronouns         : # example: "she/her"  
   bio              : #"Ph.D. Candidate in Economics at McMaster University"
