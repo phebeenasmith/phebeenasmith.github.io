@@ -3,7 +3,7 @@ title: "Graduate Teaching"
 collection: teaching
 type: "Graduate Course"
 permalink: /teaching/2014-spring-teaching-1
-venue: "University 1, Department"
+venue: "Mcmaster University, Department of Economics"
 date: 2014-01-01
 location: "City, Country"
 ---
