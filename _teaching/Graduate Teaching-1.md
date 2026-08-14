@@ -20,7 +20,7 @@ location: "Hamilton, Ontario"
 - **ECON 724: Advanced Macroeconomics I** (Fall 2024, Fall 2025)  
   [Syllabus](#) | <a href="javascript:void(0)" onclick="toggleContent('responsibilities-content')">Responsibilities</a> | <a href="javascript:void(0)" onclick="toggleContent('recognition-content')">Recognition</a>
 
-🏆 **TA of the Year Award** – received during first semester of teaching this course. Invited to return for a second semester.
+
 
 ---
 
@@ -42,7 +42,7 @@ location: "Hamilton, Ontario"
     <li>Recognized for clarity of explanations and high student evaluation scores</li>
     <li>Invited to return for a second semester based on performance</li>
   </ul>
-  [📄 Download Award Letter (PDF)](/files/teaching/ta-award-letter.pdf)
+
 </div>
 
 ---
