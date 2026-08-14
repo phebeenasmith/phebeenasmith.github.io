@@ -18,37 +18,32 @@ location: "Hamilton, Ontario"
 ## Teaching Assistant (Graduate Level)
 
 - **ECON 724: Advanced Macroeconomics I** (Fall 2024, Fall 2025)  
-  [Syllabus](#) | [Responsibilities](#responsibilities) | [Recognition](#ta-award)
+  [Syllabus](#) | <a href="javascript:void(0)" onclick="toggleContent('responsibilities-content')">Responsibilities</a> | <a href="javascript:void(0)" onclick="toggleContent('recognition-content')">Recognition</a>
 
 🏆 **TA of the Year Award** – received during first semester of teaching this course. Invited to return for a second semester.
 
 ---
 
-<details>
-  <summary id="responsibilities"><strong>Responsibilities</strong></summary>
-
+<div id="responsibilities-content" style="display: none; margin-top: 10px; padding: 10px; border-left: 3px solid #ccc; background-color: #f9f9f9;">
+  <strong>Responsibilities</strong><br>
   As the Graduate Teaching Assistant for ECON 724, I led weekly tutorials for a cohort of PhD students, focusing on advanced macroeconomic theory including dynamic stochastic general equilibrium (DSGE) models, optimal control, and dynamic programming. My primary responsibility was to guide students through complex problem sets and derivations, breaking down the mathematical structure while emphasizing the underlying economic intuition. I also held regular office hours to provide one-on-one support, assisted in exam preparation and grading, and collaborated with the course instructor to ensure students developed a deep understanding of the material.
-
-</details>
+</div>
 
 ---
 
-<details>
-  <summary id="ta-award"><strong>🏆 TA of the Year Award</strong></summary>
-
-  **Department of Economics, McMaster University**
-
-  Awarded for outstanding performance as a Teaching Assistant in **ECON 724: Advanced Macroeconomics I** during the Fall 2024 semester.
-
-  **Recognition Details:**
-
-  - Received during my first semester teaching the course
-  - Recognized for clarity of explanations and high student evaluation scores
-  - Invited to return for a second semester based on performance
-
+<div id="recognition-content" style="display: none; margin-top: 10px; padding: 10px; border-left: 3px solid #ccc; background-color: #f9f9f9;">
+  <strong>🏆 TA of the Year Award</strong><br>
+  <strong>Department of Economics, McMaster University</strong><br><br>
+  Awarded for outstanding performance as a Teaching Assistant in <strong>ECON 724: Advanced Macroeconomics I</strong> during the Fall 2024 semester.
+  <br><br>
+  <strong>Recognition Details:</strong>
+  <ul>
+    <li>Received during my first semester teaching the course</li>
+    <li>Recognized for clarity of explanations and high student evaluation scores</li>
+    <li>Invited to return for a second semester based on performance</li>
+  </ul>
   [📄 Download Award Letter (PDF)](/files/teaching/ta-award-letter.pdf)
-
-</details>
+</div>
 
 ---
 
@@ -68,3 +63,14 @@ location: "Hamilton, Ontario"
 - **Instructor of Record** for ECON 2Y03: Student evaluations rated clarity of communication at **7.86/10**. Students described the instruction as *"intuitive," "very thorough,"* and providing *"the best practice test outlines I have ever had."*
 - **Graduate TA**: Led weekly tutorials for a PhD core course, focusing on explaining the economic intuition behind complex mathematical derivations. Received department's **TA of the Year Award**.
 - [📄 Download Full Evaluation Report (PDF)](/files/teaching/evaluation-report-fall2025.pdf)
+
+<script>
+function toggleContent(id) {
+  var content = document.getElementById(id);
+  if (content.style.display === "none" || content.style.display === "") {
+    content.style.display = "block";
+  } else {
+    content.style.display = "none";
+  }
+}
+</script>
