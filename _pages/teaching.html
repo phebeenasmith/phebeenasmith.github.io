@@ -11,12 +11,29 @@ author_profile: true
     color: #000000 !important;
   }
 
-  /* Teaching Philosophy button */
-  .teaching-intro {
-    margin: 0 0 1.5em;
+  /* Comfortable width for the introduction and panels */
+  .teaching-intro,
+  .teaching-section {
+    box-sizing: border-box;
+    width: calc(100% - 24px);
+    max-width: 760px;
+    margin-left: 0;
+    margin-right: auto;
   }
 
-  .page__content a.teaching-philosophy-link {
+  /* Introduction */
+  .teaching-intro {
+    margin-top: 0;
+    margin-bottom: 1.5em;
+  }
+
+  .teaching-intro-text {
+    margin: 0 0 1em;
+    line-height: 1.7;
+  }
+
+  /* Teaching Philosophy button */
+  a.teaching-file-link.teaching-philosophy-link {
     display: inline-block;
     padding: 0.55em 0.95em;
     border: 1px solid #EADBD2;
@@ -32,20 +49,21 @@ author_profile: true
       border-color 0.18s ease;
   }
 
-  .page__content a.teaching-philosophy-link:hover {
+  a.teaching-file-link.teaching-philosophy-link:hover {
     border-color: #A64B2A;
     background: #FCF8F5;
     text-decoration: none;
   }
 
-  .page__content a.teaching-philosophy-link:focus-visible {
+  a.teaching-file-link.teaching-philosophy-link:focus-visible {
     outline: 2px solid #A64B2A;
     outline-offset: 3px;
   }
 
   /* Soft expandable panels */
   .teaching-section {
-    margin: 0 0 16px;
+    margin-top: 0;
+    margin-bottom: 16px;
     padding: 0;
     border: 1px solid #EADBD2;
     border-radius: 8px;
@@ -127,7 +145,7 @@ author_profile: true
   }
 
   /* Institution headings */
-  .page__content .teaching-institution {
+  .teaching-section-content .teaching-institution {
     margin-top: 1.5em;
     margin-bottom: 0.5em;
     color: #A64B2A;
@@ -136,7 +154,6 @@ author_profile: true
     line-height: 1.5;
   }
 
-  .page__content
   .teaching-section-content > .teaching-institution:first-child {
     margin-top: 0;
   }
@@ -145,8 +162,8 @@ author_profile: true
     color: #A64B2A;
   }
 
-  /* Keep ordinary file links blue */
-  .page__content a.teaching-file-link {
+  /* Ordinary file links */
+  a.teaching-file-link {
     color: #52adc8;
   }
 
@@ -183,6 +200,11 @@ author_profile: true
 
   /* Smaller screens */
   @media (max-width: 600px) {
+    .teaching-intro,
+    .teaching-section {
+      width: 100%;
+    }
+
     .teaching-section > summary {
       gap: 10px;
       padding: 17px 16px;
@@ -198,14 +220,14 @@ author_profile: true
   @media (prefers-reduced-motion: reduce) {
     .teaching-section > summary,
     .teaching-section > summary::before,
-    .page__content a.teaching-philosophy-link {
+    a.teaching-file-link.teaching-philosophy-link {
       transition: none;
     }
   }
 </style>
 
 <div class="teaching-intro">
-  <p style="max-width: 720px; margin: 0 0 1em; line-height: 1.7;">
+  <p class="teaching-intro-text">
     I aim to make economics accessible, engaging, and connected
     to the world students encounter beyond the classroom.
     My teaching emphasizes economic intuition, clear explanations,
