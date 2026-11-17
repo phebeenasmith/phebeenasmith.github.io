@@ -6,41 +6,151 @@ author_profile: true
 ---
 
 <style>
+  /* Main page title */
   .page__title {
     color: #000000 !important;
   }
 
-  .teaching-section {
-    margin: 0;
-    padding: 1.1em 0;
-    border-bottom: 1px solid #dddddd;
+  /* Teaching Philosophy button */
+  .teaching-intro {
+    margin: 0 0 1.5em;
   }
 
+  .page__content a.teaching-philosophy-link {
+    display: inline-block;
+    padding: 0.55em 0.95em;
+    border: 1px solid #EADBD2;
+    border-radius: 7px;
+    background: #FFFFFF;
+    color: #52adc8;
+    font-size: 0.9em;
+    font-weight: 500;
+    line-height: 1.5;
+    text-decoration: none;
+    transition:
+      background-color 0.18s ease,
+      border-color 0.18s ease;
+  }
+
+  .page__content a.teaching-philosophy-link:hover {
+    border-color: #A64B2A;
+    background: #FCF8F5;
+    text-decoration: none;
+  }
+
+  .page__content a.teaching-philosophy-link:focus-visible {
+    outline: 2px solid #A64B2A;
+    outline-offset: 3px;
+  }
+
+  /* Soft expandable panels */
+  .teaching-section {
+    margin: 0 0 16px;
+    padding: 0;
+    border: 1px solid #EADBD2;
+    border-radius: 8px;
+    background: #FCF8F5;
+    box-shadow: none;
+  }
+
+  /* Section headings */
   .teaching-section > summary {
-    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0;
+    padding: 20px 22px;
+    border: 0;
+    border-radius: 8px;
+    list-style: none;
     color: #A64B2A;
-    font-size: 1.5em;
-    font-weight: bold;
-    line-height: 1.4;
+    font-size: 23px;
+    font-weight: 600;
+    line-height: 1.35;
+    cursor: pointer;
+    transition: background-color 0.18s ease;
+  }
+
+  /* Hide default browser arrows */
+  .teaching-section > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .teaching-section > summary::marker {
+    content: "";
+  }
+
+  /* Small custom chevrons */
+  .teaching-section > summary::before {
+    content: "";
+    display: inline-block;
+    flex: 0 0 7px;
+    width: 7px;
+    height: 7px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(-45deg);
+    transition: transform 0.18s ease;
+  }
+
+  .teaching-section[open] > summary::before {
+    transform: rotate(45deg);
+  }
+
+  .teaching-section > summary:hover {
+    background: #F5EBE4;
   }
 
   .teaching-section > summary:focus-visible {
     outline: 2px solid #A64B2A;
-    outline-offset: 4px;
+    outline-offset: -4px;
   }
 
+  .teaching-section[open] > summary {
+    border-radius: 8px 8px 0 0;
+  }
+
+  /* Expanded content */
   .teaching-section-content {
-    padding-top: 1em;
+    padding: 6px 22px 22px;
+    color: #494E52;
+    line-height: 1.65;
+    overflow-wrap: break-word;
   }
 
-  .teaching-institution {
-    color: #000000;
+  .teaching-section-content > :first-child {
+    margin-top: 0;
   }
 
-  a.teaching-file-link {
+  .teaching-section-content > :last-child {
+    margin-bottom: 0;
+  }
+
+  /* Institution headings */
+  .page__content .teaching-institution {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    color: #A64B2A;
+    font-size: 1.05em;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  .page__content
+  .teaching-section-content > .teaching-institution:first-child {
+    margin-top: 0;
+  }
+
+  .teaching-affiliation {
+    color: #A64B2A;
+  }
+
+  /* Keep ordinary file links blue */
+  .page__content a.teaching-file-link {
     color: #52adc8;
   }
 
+  /* Inline Responsibilities / Evaluations buttons */
   button.teaching-inline-toggle,
   button.teaching-inline-toggle:hover,
   button.teaching-inline-toggle:focus {
@@ -70,10 +180,32 @@ author_profile: true
   .teaching-panel {
     margin-bottom: 1em;
   }
+
+  /* Smaller screens */
+  @media (max-width: 600px) {
+    .teaching-section > summary {
+      gap: 10px;
+      padding: 17px 16px;
+      font-size: 20px;
+    }
+
+    .teaching-section-content {
+      padding: 6px 16px 20px;
+    }
+  }
+
+  /* Respect reduced-motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    .teaching-section > summary,
+    .teaching-section > summary::before,
+    .page__content a.teaching-philosophy-link {
+      transition: none;
+    }
+  }
 </style>
 
-<p>
-  <a class="teaching-file-link"
+<p class="teaching-intro">
+  <a class="teaching-file-link teaching-philosophy-link"
      href="{{ '/files/Teaching_Philosophy_Phebeena_Smith.pdf' | relative_url }}">
     Teaching Philosophy (PDF)
   </a>
@@ -84,7 +216,9 @@ author_profile: true
 
   <div class="teaching-section-content">
 
-    <p><em>McMaster University</em></p>
+    <p class="teaching-affiliation">
+      <em>McMaster University</em>
+    </p>
 
     <ul>
       <li>
@@ -170,7 +304,9 @@ author_profile: true
 
   <div class="teaching-section-content">
 
-    <p><em>Teaching Assistant, McMaster University</em></p>
+    <p class="teaching-affiliation">
+      <em>Teaching Assistant, McMaster University</em>
+    </p>
 
     <ul>
       <li>
@@ -234,7 +370,9 @@ author_profile: true
 
   <div class="teaching-section-content">
 
-    <p><em>Teaching Assistant, McMaster University</em></p>
+    <p class="teaching-affiliation">
+      <em>Teaching Assistant, McMaster University</em>
+    </p>
 
     <ul>
       <li>
