@@ -5,32 +5,75 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
+<h2>Job Market Paper</h2>
 
-{% include base_path %}
+<p>
+  <strong>College Financial Aid Composition and Search Behavior</strong>
+</p>
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+<ul>
+  <li>
+    <details>
+      <summary style="cursor: pointer; color: #52adc8; text-decoration: underline;">
+        Abstract
+      </summary>
+      <p>
+        A quantitative overlapping-generations model with directed job
+        search is developed to study how the composition of college
+        financing shapes graduates' labor market outcomes. In my model,
+        college can be financed by grants, loans, family transfers, or
+        earnings, and graduates with more debt search for shorter periods
+        and accept lower-paying jobs. Using NLSY97 data, I document that
+        graduates with more student debt spend less time without work
+        after college and earn lower wages, consistent with this mechanism.
+        Expanding federal loan limits raises enrollment but increases
+        graduate debt, shortening job search and lowering wages. In
+        contrast, expanding grants allows graduates to search longer and
+        secure higher-paying jobs, suggesting that grant-based aid
+        improves labor market efficiency.
+      </p>
+    </details>
+  </li>
 
+  <li>
+    <a href="{{ '/files/Phebeena-Smith-Job-Market-Paper.pdf' | relative_url }}">
+      Full Paper (PDF)
+    </a>
+  </li>
+</ul>
 
+<hr>
 
+<h2>Work in Progress</h2>
+
+<p>
+  <strong>Labor Market Frictions and College Enrolment</strong>
+</p>
+
+<!--
+To add slides after uploading the PDF, remove the surrounding
+comment markers and replace YOUR-SLIDES-FILENAME.pdf below.
+
+<ul>
+  <li>
+    <a href="{{ '/files/YOUR-SLIDES-FILENAME.pdf' | relative_url }}">
+      Slides
+    </a>
+  </li>
+</ul>
+-->
+
+<p>
+  <strong>What Spills Over? Neighborhood Sorting and the
+  Intergenerational Transmission of Human Capital</strong>
+  <em>(with Angela Zheng)</em>
+</p>
+
+<!-- Add the slides link for this paper here once uploaded. -->
+
+<p>
+  <strong>Immigrant Labor Market Integration in Canada</strong>
+  <em>(with Kritagya Dhanda)</em>
+</p>
+
+<!-- Add the slides link for this paper here once uploaded. -->
