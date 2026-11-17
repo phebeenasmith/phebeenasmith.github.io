@@ -10,8 +10,27 @@ author_profile: true
     color: #000000 !important;
   }
 
-  .teaching-section-heading {
+  .teaching-section {
+    margin: 0;
+    padding: 1.1em 0;
+    border-bottom: 1px solid #dddddd;
+  }
+
+  .teaching-section > summary {
+    cursor: pointer;
     color: #A64B2A;
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 1.4;
+  }
+
+  .teaching-section > summary:focus-visible {
+    outline: 2px solid #A64B2A;
+    outline-offset: 4px;
+  }
+
+  .teaching-section-content {
+    padding-top: 1em;
   }
 
   .teaching-institution {
@@ -60,258 +79,276 @@ author_profile: true
   </a>
 </p>
 
-<h2 class="teaching-section-heading">Instructor</h2>
+<details class="teaching-section">
+  <summary>Instructor</summary>
 
-<p><em>McMaster University</em></p>
+  <div class="teaching-section-content">
 
-<ul>
-  <li>
-    <strong>ECON 2Y03: Intermediate Macroeconomics I</strong><br>
-    Fall 2025; Winter 2027 (scheduled)
-  </li>
-</ul>
+    <p><em>McMaster University</em></p>
 
-<p>
-  My teaching emphasizes economic intuition, clear explanations,
-  and structured practice. I guide students through the reasoning
-  behind economic models and help them apply that reasoning
-  independently.
-</p>
+    <ul>
+      <li>
+        <strong>ECON 2Y03: Intermediate Macroeconomics I</strong><br>
+        Fall 2025; Winter 2027 (scheduled)
+      </li>
+    </ul>
 
-<p>
-  <button type="button"
-          class="teaching-inline-toggle"
-          aria-expanded="false"
-          aria-controls="instructor-responsibilities"
-          onclick="toggleTeachingPanel(this)">
-    Responsibilities
-  </button>
+    <p>
+      My teaching emphasizes economic intuition, clear explanations,
+      and structured practice. I guide students through the reasoning
+      behind economic models and help them apply that reasoning
+      independently.
+    </p>
 
-  <span aria-hidden="true"> | </span>
+    <p>
+      <button type="button"
+              class="teaching-inline-toggle"
+              aria-expanded="false"
+              aria-controls="instructor-responsibilities"
+              onclick="toggleTeachingPanel(this)">
+        Responsibilities
+      </button>
 
-  <a class="teaching-file-link"
-     href="{{ '/files/ECON%202Y03%20C01%20Course%20Outline%20Fall%202025%20-%20Phebeena%20Smith.pdf' | relative_url }}">
-    Syllabus
-  </a>
+      <span aria-hidden="true"> | </span>
 
-  <span aria-hidden="true"> | </span>
-
-  <button type="button"
-          class="teaching-inline-toggle"
-          aria-expanded="false"
-          aria-controls="instructor-evaluations"
-          onclick="toggleTeachingPanel(this)">
-    Student Evaluations
-  </button>
-</p>
-
-<div id="instructor-responsibilities"
-     class="teaching-panel"
-     hidden>
-  <p>
-    As instructor of record for the Fall 2025 offering, I prepared
-    and delivered lectures, developed practice materials, designed
-    and graded assessments, managed the course site, communicated
-    course requirements, and calculated and submitted final grades.
-    My teaching emphasized economic intuition, model assumptions,
-    and analytical problem-solving.
-  </p>
-</div>
-
-<div id="instructor-evaluations"
-     class="teaching-panel"
-     hidden>
-  <p><strong>Student Evaluations — Fall 2025</strong></p>
-
-  <ul>
-    <li>
       <a class="teaching-file-link"
-         href="{{ '/files/Fall%202025%20Full%20Survey%20for%20ECON%202Y03%20C01%20(Phebeena%20Smith)_Student%20Evaluations.pdf' | relative_url }}">
-        Full Student Evaluation Report (PDF)
+         href="{{ '/files/ECON%202Y03%20C01%20Course%20Outline%20Fall%202025%20-%20Phebeena%20Smith.pdf' | relative_url }}">
+        Syllabus
       </a>
-    </li>
 
-    <li>
-      <a class="teaching-file-link"
-         href="{{ '/files/Fall_2025_Senate_Mandated_Question_ECON_2Y03_C01_(Phebeena_Smith).pdf' | relative_url }}">
-        Senate-Mandated Question Report (PDF)
-      </a>
-    </li>
-  </ul>
-</div>
+      <span aria-hidden="true"> | </span>
 
-<hr>
+      <button type="button"
+              class="teaching-inline-toggle"
+              aria-expanded="false"
+              aria-controls="instructor-evaluations"
+              onclick="toggleTeachingPanel(this)">
+        Student Evaluations
+      </button>
+    </p>
 
-<h2 class="teaching-section-heading">Graduate Teaching</h2>
+    <div id="instructor-responsibilities"
+         class="teaching-panel"
+         hidden>
+      <p>
+        As instructor of record for the Fall 2025 offering, I prepared
+        and delivered lectures, developed practice materials, designed
+        and graded assessments, managed the course site, communicated
+        course requirements, and calculated and submitted final grades.
+        My teaching emphasized economic intuition, model assumptions,
+        and analytical problem-solving.
+      </p>
+    </div>
 
-<p><em>Teaching Assistant, McMaster University</em></p>
+    <div id="instructor-evaluations"
+         class="teaching-panel"
+         hidden>
+      <p><strong>Student Evaluations — Fall 2025</strong></p>
 
-<ul>
-  <li>
-    <strong>ECON 723: PhD-Level Macroeconomics</strong><br>
-    Fall 2024, Fall 2025
-  </li>
-</ul>
+      <ul>
+        <li>
+          <a class="teaching-file-link"
+             href="{{ '/files/Fall%202025%20Full%20Survey%20for%20ECON%202Y03%20C01%20(Phebeena%20Smith)_Student%20Evaluations.pdf' | relative_url }}">
+            Full Student Evaluation Report (PDF)
+          </a>
+        </li>
 
-<p>
-  Led tutorials and developed worked solutions connecting
-  mathematical derivations with economic intuition.
-</p>
+        <li>
+          <a class="teaching-file-link"
+             href="{{ '/files/Fall_2025_Senate_Mandated_Question_ECON_2Y03_C01_(Phebeena_Smith).pdf' | relative_url }}">
+            Senate-Mandated Question Report (PDF)
+          </a>
+        </li>
+      </ul>
+    </div>
 
-<p>
-  <button type="button"
-          class="teaching-inline-toggle"
-          aria-expanded="false"
-          aria-controls="graduate-responsibilities"
-          onclick="toggleTeachingPanel(this)">
-    Responsibilities
-  </button>
+  </div>
+</details>
 
-  <span aria-hidden="true"> | </span>
+<details class="teaching-section">
+  <summary>Graduate Teaching</summary>
 
-  <button type="button"
-          class="teaching-inline-toggle"
-          aria-expanded="false"
-          aria-controls="graduate-recognition"
-          onclick="toggleTeachingPanel(this)">
-    Recognition
-  </button>
-</p>
+  <div class="teaching-section-content">
 
-<div id="graduate-responsibilities"
-     class="teaching-panel"
-     hidden>
-  <p>
-    Led tutorials, developed worked solutions, and guided students
-    through optimization and equilibrium analysis. My explanations
-    connected mathematical derivations with economic intuition,
-    emphasizing the economic question, relevant equilibrium
-    conditions, and the role of model assumptions. I also held
-    Zoom office hours.
-  </p>
-</div>
+    <p><em>Teaching Assistant, McMaster University</em></p>
 
-<div id="graduate-recognition"
-     class="teaching-panel"
-     hidden>
-  <p>
-    Recipient of the Department of Economics Graduate Teaching
-    Assistant Award for Fall 2024.
-  </p>
-</div>
+    <ul>
+      <li>
+        <strong>ECON 723: PhD-Level Macroeconomics</strong><br>
+        Fall 2024, Fall 2025
+      </li>
+    </ul>
 
-<hr>
+    <p>
+      Led tutorials and developed worked solutions connecting
+      mathematical derivations with economic intuition.
+    </p>
 
-<h2 class="teaching-section-heading">Undergraduate Teaching</h2>
+    <p>
+      <button type="button"
+              class="teaching-inline-toggle"
+              aria-expanded="false"
+              aria-controls="graduate-responsibilities"
+              onclick="toggleTeachingPanel(this)">
+        Responsibilities
+      </button>
 
-<p><em>Teaching Assistant, McMaster University</em></p>
+      <span aria-hidden="true"> | </span>
 
-<ul>
-  <li>
-    <strong>Intermediate Microeconomics I</strong>
-    (2021, 2025, 2026)
-  </li>
+      <button type="button"
+              class="teaching-inline-toggle"
+              aria-expanded="false"
+              aria-controls="graduate-recognition"
+              onclick="toggleTeachingPanel(this)">
+        Recognition
+      </button>
+    </p>
 
-  <li>
-    <strong>Introductory Macroeconomics</strong>
-    (Winter 2025)
-  </li>
+    <div id="graduate-responsibilities"
+         class="teaching-panel"
+         hidden>
+      <p>
+        Led tutorials, developed worked solutions, and guided students
+        through optimization and equilibrium analysis. My explanations
+        connected mathematical derivations with economic intuition,
+        emphasizing the economic question, relevant equilibrium
+        conditions, and the role of model assumptions. I also held
+        Zoom office hours.
+      </p>
+    </div>
 
-  <li>
-    <strong>Intermediate Macroeconomics II</strong>
-    (Summer 2022, Fall 2022, Winter 2025)
-  </li>
+    <div id="graduate-recognition"
+         class="teaching-panel"
+         hidden>
+      <p>
+        Recipient of the Department of Economics Graduate Teaching
+        Assistant Award for Fall 2024.
+      </p>
+    </div>
 
-  <li>
-    <strong>International Monetary Economics</strong>
-    (Winter 2023, Fall 2024)
-  </li>
+  </div>
+</details>
 
-  <li>
-    <strong>Labor Economics</strong>
-    (2023)
-  </li>
+<details class="teaching-section">
+  <summary>Undergraduate Teaching</summary>
 
-  <li>
-    <strong>Labor Market Issues</strong>
-    (2022)
-  </li>
+  <div class="teaching-section-content">
 
-  <li>
-    <strong>Financial Economics</strong>
-    (2022)
-  </li>
+    <p><em>Teaching Assistant, McMaster University</em></p>
 
-  <li>
-    <strong>The Economics of Professional Sport</strong>
-    (2024)
-  </li>
+    <ul>
+      <li>
+        <strong>Intermediate Microeconomics I</strong>
+        (2021, 2025, 2026)
+      </li>
 
-  <li>
-    <strong>Econometrics I</strong>
-    (2021)
-  </li>
-</ul>
+      <li>
+        <strong>Introductory Macroeconomics</strong>
+        (Winter 2025)
+      </li>
 
-<hr>
+      <li>
+        <strong>Intermediate Macroeconomics II</strong>
+        (Summer 2022, Fall 2022, Winter 2025)
+      </li>
 
-<h2 class="teaching-section-heading">Earlier Career Teaching</h2>
+      <li>
+        <strong>International Monetary Economics</strong>
+        (Winter 2023, Fall 2024)
+      </li>
 
-<h3 class="teaching-institution">
-  Knox Community College, Jamaica
-</h3>
+      <li>
+        <strong>Labor Economics</strong>
+        (2023)
+      </li>
 
-<p><em>Full-Time Lecturer, 2008–2016</em></p>
+      <li>
+        <strong>Labor Market Issues</strong>
+        (2022)
+      </li>
 
-<p>
-  Taught economics, accounting, mathematics, and statistics.
-  Responsibilities included preparing course materials,
-  delivering instruction, designing assessments, and
-  contributing to curriculum development.
-</p>
+      <li>
+        <strong>Financial Economics</strong>
+        (2022)
+      </li>
 
-<h3 class="teaching-institution">
-  University of the Commonwealth of the Caribbean, Jamaica
-</h3>
+      <li>
+        <strong>The Economics of Professional Sport</strong>
+        (2024)
+      </li>
 
-<p><em>Part-Time Lecturer, 2012–2015</em></p>
+      <li>
+        <strong>Econometrics I</strong>
+        (2021)
+      </li>
+    </ul>
 
-<p>
-  Taught undergraduate courses in economics, accounting,
-  and finance.
-</p>
+  </div>
+</details>
 
-<h3 class="teaching-institution">
-  Northern Caribbean University, Jamaica
-</h3>
+<details class="teaching-section">
+  <summary>Earlier Career Teaching</summary>
 
-<p><em>Part-Time Lecturer, 2012–2013</em></p>
+  <div class="teaching-section-content">
 
-<p>
-  Taught Accounting Business Analysis, Advanced Accounting,
-  and Performance Management.
-</p>
+    <h3 class="teaching-institution">
+      Knox Community College, Jamaica
+    </h3>
 
-<h3 class="teaching-institution">
-  University of the West Indies, Mona, Jamaica
-</h3>
+    <p><em>Full-Time Lecturer, 2008–2016</em></p>
 
-<p><em>Undergraduate Teaching Assistant, 2006–2008</em></p>
+    <p>
+      Taught economics, accounting, mathematics, and statistics.
+      Responsibilities included preparing course materials,
+      delivering instruction, designing assessments, and
+      contributing to curriculum development.
+    </p>
 
-<p>
-  Conducted Precalculus tutorials in the Department of Economics
-  and assisted with grading.
-</p>
+    <h3 class="teaching-institution">
+      University of the Commonwealth of the Caribbean, Jamaica
+    </h3>
 
-<h3 class="teaching-institution">Studiosity</h3>
+    <p><em>Part-Time Lecturer, 2012–2015</em></p>
 
-<p><em>Economics and Accounting Specialist, 2017–2021</em></p>
+    <p>
+      Taught undergraduate courses in economics, accounting,
+      and finance.
+    </p>
 
-<p>
-  Provided individualized, real-time online academic support
-  to tertiary students, using guided questions and
-  step-by-step explanations to develop independent reasoning.
-</p>
+    <h3 class="teaching-institution">
+      Northern Caribbean University, Jamaica
+    </h3>
+
+    <p><em>Part-Time Lecturer, 2012–2013</em></p>
+
+    <p>
+      Taught Accounting Business Analysis, Advanced Accounting,
+      and Performance Management.
+    </p>
+
+    <h3 class="teaching-institution">
+      University of the West Indies, Mona, Jamaica
+    </h3>
+
+    <p><em>Undergraduate Teaching Assistant, 2006–2008</em></p>
+
+    <p>
+      Conducted Precalculus tutorials in the Department of Economics
+      and assisted with grading.
+    </p>
+
+    <h3 class="teaching-institution">Studiosity</h3>
+
+    <p><em>Economics and Accounting Specialist, 2017–2021</em></p>
+
+    <p>
+      Provided individualized, real-time online academic support
+      to tertiary students, using guided questions and
+      step-by-step explanations to develop independent reasoning.
+    </p>
+
+  </div>
+</details>
 
 <script>
   function toggleTeachingPanel(button) {
