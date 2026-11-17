@@ -18,18 +18,38 @@ author_profile: true
     color: #000000;
   }
 
-  .teaching-details {
-    margin-bottom: 1em;
+  a.teaching-file-link {
+    color: #52adc8;
   }
 
-  .teaching-details summary {
-    cursor: pointer;
+  button.teaching-inline-toggle,
+  button.teaching-inline-toggle:hover,
+  button.teaching-inline-toggle:focus {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
     color: #52adc8;
+    font: inherit;
+    text-transform: none;
     text-decoration: underline;
+    cursor: pointer;
   }
 
-  .teaching-file-link {
-    color: #52adc8;
+  button.teaching-inline-toggle:focus-visible {
+    outline: 2px solid #52adc8;
+    outline-offset: 3px;
+  }
+
+  .teaching-panel[hidden] {
+    display: none !important;
+  }
+
+  .teaching-panel {
+    margin-bottom: 1em;
   }
 </style>
 
@@ -58,9 +78,36 @@ author_profile: true
   independently.
 </p>
 
-<details class="teaching-details">
-  <summary>Responsibilities</summary>
+<p>
+  <button type="button"
+          class="teaching-inline-toggle"
+          aria-expanded="false"
+          aria-controls="instructor-responsibilities"
+          onclick="toggleTeachingPanel(this)">
+    Responsibilities
+  </button>
 
+  <span aria-hidden="true"> | </span>
+
+  <a class="teaching-file-link"
+     href="{{ '/files/ECON%202Y03%20C01%20Course%20Outline%20Fall%202025%20-%20Phebeena%20Smith.pdf' | relative_url }}">
+    Syllabus
+  </a>
+
+  <span aria-hidden="true"> | </span>
+
+  <button type="button"
+          class="teaching-inline-toggle"
+          aria-expanded="false"
+          aria-controls="instructor-evaluations"
+          onclick="toggleTeachingPanel(this)">
+    Student Evaluations
+  </button>
+</p>
+
+<div id="instructor-responsibilities"
+     class="teaching-panel"
+     hidden>
   <p>
     As instructor of record for the Fall 2025 offering, I prepared
     and delivered lectures, developed practice materials, designed
@@ -69,17 +116,12 @@ author_profile: true
     My teaching emphasized economic intuition, model assumptions,
     and analytical problem-solving.
   </p>
-</details>
+</div>
 
-<p>
-  <a class="teaching-file-link"
-     href="{{ '/files/ECON%202Y03%20C01%20Course%20Outline%20Fall%202025%20-%20Phebeena%20Smith.pdf' | relative_url }}">
-    Syllabus — Fall 2025 (PDF)
-  </a>
-</p>
-
-<details class="teaching-details">
-  <summary>Student Evaluations — Fall 2025</summary>
+<div id="instructor-evaluations"
+     class="teaching-panel"
+     hidden>
+  <p><strong>Student Evaluations — Fall 2025</strong></p>
 
   <ul>
     <li>
@@ -96,7 +138,7 @@ author_profile: true
       </a>
     </li>
   </ul>
-</details>
+</div>
 
 <hr>
 
@@ -116,9 +158,29 @@ author_profile: true
   mathematical derivations with economic intuition.
 </p>
 
-<details class="teaching-details">
-  <summary>Responsibilities</summary>
+<p>
+  <button type="button"
+          class="teaching-inline-toggle"
+          aria-expanded="false"
+          aria-controls="graduate-responsibilities"
+          onclick="toggleTeachingPanel(this)">
+    Responsibilities
+  </button>
 
+  <span aria-hidden="true"> | </span>
+
+  <button type="button"
+          class="teaching-inline-toggle"
+          aria-expanded="false"
+          aria-controls="graduate-recognition"
+          onclick="toggleTeachingPanel(this)">
+    Recognition
+  </button>
+</p>
+
+<div id="graduate-responsibilities"
+     class="teaching-panel"
+     hidden>
   <p>
     Led tutorials, developed worked solutions, and guided students
     through optimization and equilibrium analysis. My explanations
@@ -127,16 +189,16 @@ author_profile: true
     conditions, and the role of model assumptions. I also held
     Zoom office hours.
   </p>
-</details>
+</div>
 
-<details class="teaching-details">
-  <summary>Recognition</summary>
-
+<div id="graduate-recognition"
+     class="teaching-panel"
+     hidden>
   <p>
     Recipient of the Department of Economics Graduate Teaching
     Assistant Award for Fall 2024.
   </p>
-</details>
+</div>
 
 <hr>
 
@@ -195,7 +257,9 @@ author_profile: true
 
 <h2 class="teaching-section-heading">Earlier Career Teaching</h2>
 
-<h3 class="teaching-institution">Knox Community College, Jamaica</h3>
+<h3 class="teaching-institution">
+  Knox Community College, Jamaica
+</h3>
 
 <p><em>Full-Time Lecturer, 2008–2016</em></p>
 
@@ -248,3 +312,19 @@ author_profile: true
   to tertiary students, using guided questions and
   step-by-step explanations to develop independent reasoning.
 </p>
+
+<script>
+  function toggleTeachingPanel(button) {
+    var panelId = button.getAttribute("aria-controls");
+    var panel = document.getElementById(panelId);
+
+    if (!panel) {
+      return;
+    }
+
+    var expanded = button.getAttribute("aria-expanded") === "true";
+
+    button.setAttribute("aria-expanded", String(!expanded));
+    panel.hidden = expanded;
+  }
+</script>
